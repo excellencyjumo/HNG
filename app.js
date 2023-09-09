@@ -8,7 +8,7 @@ app.get('/api', (req, res) => {
   const slackName = req.query.slack_name || 'excellencyjumo';
   const track = req.query.track || 'backend';
   const currentDay = new Date().toLocaleDateString('en-US', { weekday: 'long' });
-  const utcTime = new Date().toISOString().replace(/T/, ' ').replace(/\..+/, '');
+  const utcTime = new Date().toISOString();
 
   const jsonResponse = {
     slack_name: slackName,
